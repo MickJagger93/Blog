@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style/style.css') }}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="icon" type="image/png" href="{{ url_for('static', filename='img/blog.png') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+    <title>{% block title %} Blog {% endblock %}</title>
+</head>
+<body class="body-container">
+    
+    {% block content %}{% endblock %}
+
+    <main>
+
+        <div class="img-landing">
+            
+            <p class="text-landing">
+                Share your creativity and connect with a community of readers.
+            </p>
+        
+        </div>
+        
+        <div< class="table-info">
+
+            <section>
+
+                <div class="info">
+                
+                    <p class="text"> 
+                        Share your ideas, inspire others.
+                        Join our community of writers and create posts about what you are passionate about. 
+                        Easy, fast and open to everyone.
+                    </p>
+
+                </div>
+
+            </section>
+        
+            <section>
+
+                <div class="info">
+
+                    <p class="text">
+                        How does it work?
+
+                        1. Sign up: Create your account in seconds, it's free!  
+                        2. Write: Publish posts on any topic that interests you.  
+                        3. Share: Your content will be visible to the whole community and you will be able to 
+                        inspire others.
+                    </p>
+
+                </div>
+
+            </section>
+
+            <section>
+
+                <div class="info">
+
+                    <p class="text">
+                        - Easy to use: An intuitive platform for you to focus on what matters most: writing.  
+                        - Your space, your rules: Control what you publish and how you want to express yourself.  
+                    </p>
+
+                </div>
+
+            </section>
+
+        </div>
+    
+    </main>
+
+</body>
+</html>

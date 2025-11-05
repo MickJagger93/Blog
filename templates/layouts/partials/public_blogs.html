@@ -1,0 +1,44 @@
+{% extends 'layouts/base_public_blogs.html' %}
+
+    {% block content %}
+    
+    <h1 class="title">Public Blogs</h1>
+
+        <div class="posts-grid">
+            {% for post in posts %}
+    
+            <div class="post-card">
+        
+                <h2 class="post-title"
+                    data-title="{{ post.name_post }}"
+                    data-content="{{ post.post|replace('\n', '<br>')|safe }}"
+                    data-date="{{ post.date }}"
+                    data-category="{{ post.category }}"
+                    onclick="showModalFromElement(this)">
+                    {{ post.name_post }}
+                </h2>
+    
+            </div>
+    
+            {% endfor %}
+    </div>
+
+    <div id="modal" class="modal" style="display:none;">
+    
+        <div class="modal-content">
+           <span class="close" onclick="closeModal()">&times;</span>
+            <h2 id="modal-title"></h2>
+            <p id="modal-date"></p>
+            <p id="modal-category"></p>
+            <hr>
+            <p id="modal-body"></p>
+        </div>
+    </div>
+
+    <p>
+        <a class="centered-link" href="{{ url_for('main.index') }}" class="link">Back To Blog</a>
+    </p>
+
+    <script src="{{ url_for('static', filename='js/public_blog.js') }}"></script>
+
+{% endblock %}

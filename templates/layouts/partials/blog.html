@@ -1,0 +1,23 @@
+{% extends "layouts/base.html" %}
+
+{% block content %}
+
+    <h2 class="title">Blog</h2>
+
+    <nav class="navbar">
+        <ul>
+            <li><a class="link-blog"href="{{ url_for('auth.login') }}">Login</a></li>
+            <li><a class="link-blog"href="{{ url_for('auth.register') }}">Register</a></li>
+            <li><a class="link-blog"href="{{ url_for('public.public_blogs') }}">Blog</a>
+        </ul>
+    </nav>
+
+    {% if messages %}
+        <ul>
+            {% for message in messages %}
+                <p class="success-message"> {{ message }} </p>
+            {% endfor %}
+        </ul>
+    {% endif %}
+
+{% endblock %}
