@@ -35,7 +35,7 @@ def add_post():
 def view_post():
 
     messages = get_flashed_messages()
-    posts = Post.query.all()
+    posts = Post.query.filter_by(blogger_id=current_user.id).all()
     return render_template('layouts/partials/view_post.html', posts=posts, messages=messages)
 
 @posts_bp.route('/edit_post/<int:post_id>', methods=['GET', 'POST'])
