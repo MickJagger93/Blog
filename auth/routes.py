@@ -18,9 +18,9 @@ def login():
         
         blogger = Blogger.query.filter_by(email=email).first()
 
-        if not blogger.check_password(password):
+        if blogger is None or not blogger.check_password(password):
 
-            flash('Invalid email or password. Please try agaiin.')
+            flash('Invalid email or password. Please try again.')
             return redirect(url_for('auth.login'))
         
         login_user(blogger)
@@ -72,7 +72,7 @@ def reset_password():
     form = ResetPassword()
     messages = get_flashed_messages()
 
-    if form.validate_on_submit:
+    if form.validate_on_submit():
 
         email = form.email.data
         new_password = form.new_password.data
