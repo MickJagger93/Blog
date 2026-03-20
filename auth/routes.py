@@ -52,7 +52,7 @@ def register():
         if blogger:
 
             flash('Your email is already registered.')
-            return redirect(url_for('register'))
+            return redirect(url_for('auth.register'))
 
         else:
 
@@ -62,7 +62,7 @@ def register():
             db.session.commit()
 
             flash('Successfully registration! Please log in.')
-            return redirect(url_for('login'))
+            return redirect(url_for('auth.login'))
 
     return render_template('layouts/partials/register.html', form=form, messages=messages)
 
@@ -88,7 +88,7 @@ def reset_password():
                 db.session.commit()
 
                 flash('Your password has been successfully updated!')
-                return redirect(url_for('login'))
+                return redirect(url_for('auth.login'))
 
         else:
             flash('Passwords do not match or invalid email. Please try again.')
