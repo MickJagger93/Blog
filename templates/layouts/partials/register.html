@@ -7,6 +7,7 @@
         <h2 class="title">Register</h2>
 
         <form method="POST" action="{{ url_for('auth.register') }}">
+            
             {{ form.hidden_tag() }}
             {{ form.csrf_token }}
 
@@ -23,11 +24,17 @@
                 <div class="floating-label" style="position: relative;">
                     {{ form.password(placeholder=" ", id="password-input") }}
                     <label for="password">Password</label>
+                    <button type="button" id="toggle-password" aria-label="Show password"
+                        style="position: absolute; right: 10px; top: 50%; transform: translateY(-50%);
+                        background:none; border:none; cursor:pointer; font-size: 1.2rem;">👁️</button>
                 </div>
-    
+
                 <div class="floating-label" style="position: relative;">
                     {{ form.confirm_password(placeholder=" ", id="confirm-password-input") }}
                     <label for="confirm_password">Confirm Password</label>
+                    <button type="button" id="toggle-confirm-password" aria-label="Show confirmation password"
+                        style="position: absolute; right: 10px; top: 50%; transform: translateY(-50%);
+                        background:none; border:none; cursor:pointer; font-size: 1.2rem;">👁️</button>
                 </div>
 
                 <button type="submit" class="btn-style">Register</button>
