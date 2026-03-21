@@ -1,4 +1,10 @@
 document.addEventListener("DOMContentLoaded", function() {
+    
+    const nameInput = document.querySelector('input[name="name"]');
+    if (nameInput) {
+        nameInput.focus();
+    }
+    
     const togglePassword = document.getElementById("toggle-password");
     const passwordInput = document.getElementById("password-input");
     if (togglePassword && passwordInput) {
