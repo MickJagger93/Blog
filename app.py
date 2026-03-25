@@ -2,14 +2,14 @@ from flask import Flask
 from flask_login import LoginManager
 from flask_migrate import Migrate
 from flask_wtf.csrf import CSRFProtect
-from config import DevelopmentConfig
+from config import ProductionConfig
 from models import Blogger, db
 import os
 
 def create_app():
 
     app = Flask(__name__)
-    app.config.from_object(DevelopmentConfig)
+    app.config.from_object(ProductionConfig)
     login_manager = LoginManager(app)
     migrate = Migrate(app, db)
     csrf = CSRFProtect(app)
