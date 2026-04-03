@@ -138,3 +138,145 @@
         margin: 0 4px;
     }
 }
+ /* diseño responsivo */
+
+ /* Móviles (max-width: 480px) */
+@media (max-width: 480px) {
+    .body-container {
+        background-attachment: scroll;
+        height: auto;
+        padding: 10px;
+    }
+
+    .title {
+        font-size: 28px;
+        margin-top: 10px;
+        text-shadow: none;
+    }
+
+    .link {
+        font-size: 18px;
+        padding: 8px 16px;
+    }
+
+    .blogger-header {
+        padding: 20px 10px 10px 10px;
+        max-width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .post-table {
+        font-size: 14px;
+        margin: 15px 0;
+        overflow-x: auto;
+        display: block;
+        white-space: nowrap;
+    }
+
+    .post-table th, 
+    .post-table td {
+        padding: 8px 10px;
+    }
+
+    .post-table .link,
+    .post-table .delete-btn {
+        font-size: 14px;
+        padding: 4px 8px;
+        margin: 0 4px;
+    }
+
+    .btn-style {
+        font-size: 18px;
+        padding: 8px 16px;
+        margin-top: 10px;
+    }
+
+    .success-message {
+        font-size: 1em;
+        padding: 12px 16px;
+        max-width: 100%;
+        margin: 0 auto 16px auto;
+    }
+
+    .search-container {
+        flex-direction: column;
+        gap: 8px;
+        max-width: 100%;
+        margin: 15px auto;
+    }
+
+    .search-container label {
+        font-size: 0.9rem;
+    }
+
+    #searchInput {
+        width: 100%;
+        font-size: 0.9rem;
+        padding: 6px 10px;
+    }
+
+    .pagination-container button {
+        margin: 4px 2px;
+        padding: 6px 10px;
+        font-size: 0.8rem;
+    }
+}
+
+/* Tablets (max-width: 768px) */
+@media (max-width: 768px) {
+    .title {
+        font-size: 38px;
+    }
+
+    .link {
+        font-size: 24px;
+        padding: 10px 18px;
+    }
+
+    .blogger-header {
+        max-width: 90%;
+        padding: 25px 15px 15px 15px;
+        margin-bottom: 25px;
+    }
+
+    .post-table {
+        font-size: 16px;
+        margin: 20px 0;
+    }
+
+    .post-table .link,
+    .post-table .delete-btn {
+        font-size: 16px;
+        padding: 6px 12px;
+        margin: 0 6px;
+    }
+
+    .btn-style {
+        font-size: 20px;
+        padding: 10px 18px;
+    }
+
+    .success-message {
+        font-size: 1.1em;
+        padding: 15px 20px;
+        max-width: 90%;
+        margin: 0 auto 20px auto;
+    }
+
+    .search-container {
+        max-width: 400px;
+        margin: 20px auto;
+        flex-direction: row;
+        gap: 10px;
+    }
+
+    #searchInput {
+        font-size: 1rem;
+    }
+
+    .pagination-container button {
+        font-size: 0.9rem;
+        padding: 6px 12px;
+        margin: 0 4px;
+    }
+}
